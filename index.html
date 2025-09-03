@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get Well Soon!</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8ffea 0%, #e0c3fc 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .card {
+            background: #fff;
+            border-radius: 32px;
+            box-shadow: 0 12px 36px rgba(160, 120, 255, 0.15), 0 0 0 8px #e0c3fc inset;
+            padding: 56px 40px 64px 40px;
+            text-align: center;
+            max-width: 700px;
+            min-height: 420px;
+            position: relative;
+            z-index: 1;
+        }
+        .card h1 {
+            color: #7c3aed;
+            font-size: 2.5em;
+            font-family: 'Pacifico', cursive, sans-serif;
+            margin-bottom: 18px;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 8px #e0c3fc55;
+        }
+        .card p {
+            color: #555;
+            font-size: 1.15em;
+            margin-bottom: 32px;
+            background: #f8ffea;
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 2px 8px #e0c3fc22;
+        }
+        .icon {
+            font-size: 4em;
+            color: #7c3aed;
+            margin-bottom: 8px;
+            animation: bounce 1.2s infinite alternate;
+            text-shadow: 0 4px 12px #e0c3fc44;
+        }
+        @keyframes bounce {
+            to { transform: translateY(-12px); }
+        }
+        .flowers {
+            position: absolute;
+            top: -38px;
+            left: -38px;
+            right: -38px;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .flower {
+            font-size: 2.5em;
+            filter: drop-shadow(0 2px 4px #e0c3fc88);
+            animation: flower-spin 3s linear infinite;
+        }
+        @keyframes flower-spin {
+            0% { transform: rotate(0deg);}
+            100% { transform: rotate(360deg);}
+        }
+        .ribbon {
+            position: absolute;
+            bottom: -24px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(90deg, #7c3aed 60%, #e0c3fc 100%);
+            color: #fff;
+            padding: 10px 40px;
+            border-radius: 16px;
+            font-size: 1.15em;
+            font-weight: bold;
+            box-shadow: 0 2px 8px #e0c3fc44;
+            letter-spacing: 1px;
+            border: 2px solid #f8ffea;
+        }
+        .heart {
+            position: absolute;
+            top: 16px;
+            right: 24px;
+            font-size: 2.2em;
+            color: #7c3aed;
+            animation: pulse 1.5s infinite;
+            text-shadow: 0 2px 8px #e0c3fc88;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1);}
+            50% { transform: scale(1.2);}
+        }
+        .sparkle {
+            position: absolute;
+            pointer-events: none;
+            z-index: 2;
+            font-size: 1.3em;
+            animation: sparkle-fade 2s infinite alternate;
+        }
+        @keyframes sparkle-fade {
+            0% { opacity: 1;}
+            100% { opacity: 0.3;}
+        }
+        .balloons {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            pointer-events: none;
+            z-index: 9;
+        }
+        .balloon {
+            position: absolute;
+            font-size: 2.5em;
+            animation: balloon-float 4s linear infinite;
+            opacity: 0.85;
+        }
+        @keyframes balloon-float {
+            0% { transform: translateY(100vh);}
+            100% { transform: translateY(-40px);}
+        }
+        .animated-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 24px;
+            object-fit: cover;
+            box-shadow: 0 4px 16px #e0c3fc44;
+            margin-bottom: 16px;
+            animation: img-pop 1.5s cubic-bezier(.68,-0.55,.27,1.55) infinite alternate;
+        }
+        @keyframes img-pop {
+            0% { transform: scale(1) rotate(-2deg);}
+            50% { transform: scale(1.08) rotate(2deg);}
+            100% { transform: scale(1) rotate(-2deg);}
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="balloons">
+        <span class="balloon" style="left:5%;animation-delay:0s;">🎈</span>
+        <span class="balloon" style="left:12%;animation-delay:.2s;">🎈</span>
+        <span class="balloon" style="left:18%;animation-delay:.4s;">🎈</span>
+        <span class="balloon" style="left:28%;animation-delay:.7s;">🎈</span>
+        <span class="balloon" style="left:35%;animation-delay:.5s;">🎈</span>
+        <span class="balloon" style="left:45%;animation-delay:.8s;">🎈</span>
+        <span class="balloon" style="left:60%;animation-delay:.3s;">🎈</span>
+        <span class="balloon" style="left:70%;animation-delay:.6s;">🎈</span>
+        <span class="balloon" style="left:80%;animation-delay:.5s;">🎈</span>
+        <span class="balloon" style="left:88%;animation-delay:.9s;">🎈</span>
+    </div>
+    <div class="card">
+        <span class="heart">💜</span>
+        <img src="mine 2.jpg" alt="Get Well Soon" class="animated-img">
+        <div class="flowers">
+            <span class="flower">🌸</span>
+            <span class="flower">🌻</span>
+            <span class="flower">🌼</span>
+            <span class="flower">🌷</span>
+        </div>
+        <div class="icon">🩺</div>
+        <h1>Get Well Soon!</h1>
+        <p>
+            Sending you lots of love, strength, and positive energy for a speedy recovery.<br>
+            May each day bring you closer to good health and happiness.<br>
+            We all miss you and can't wait to see your bright smile again!
+        </p>
+        <div class="ribbon">Wishing you a speedy recovery💐</div>
+        <!-- Sparkles around the card -->
+        <span class="sparkle" style="top:-18px;left:24px;">✨</span>
+        <span class="sparkle" style="top:-18px;right:24px;">✨</span>
+        <span class="sparkle" style="bottom:-18px;left:48px;">✨</span>
+        <span class="sparkle" style="bottom:-18px;right:48px;">✨</span>
+    </div>
+</body>
+</html>
